@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+}
+html,
+body {
+  --black: hsl(240, 6%, 13%);
+  --gray: hsl(240, 9%, 89%);
+  /* declarando uma variável '--black' e '--gray' */
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+  /* font-family: colocando duas propriedades, ele tentará carregar a primeira (Roboto), caso não seja possível, irá preencher com a segunda (sans-serif) */
+  /* '-webkit' irá fazer com que a propriedade seguinte seja aplicada apenas nos navegadores que tenham essa funcionalidade (chrome, safari, etc) */
+body {
+  display: grid;
+  place-items: center;
+}
+main {
+  background: url(images/background.png);
+  width: 375px;
+  height: 812px;
+}
+.container {
+  max-width: 250px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: var(--gray); /* utilizando a variável declarada em <body> */
+  }
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  /* cada parâmetro em 'margin' define uma margem de acordo com a quantidade de atribudos (a b, a b c, a b c d) */
+  position: relative;
+  /* 'position: relative' determina que agora ele é o limite para o absoluto */
+}
+.avatar span {
+  position: absolute;
+  top: -15px;
+  /* 'position: absolute' se referencia a todo o documento, enquanto queremos que se referencia a foto principal. para isso será necessário adicionar em '.avatar' a propriedade 'position: relative' */
+  z-index: 1;
+  /* após utilizar o 'clip-path' a imagem perde o nível de uma imagem estar sobreposta a outra. o 'z-index' ajusta a profundidade novamente. */
+}
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  /* ajustando o tamanho da imagem com 'width' e 'height' a imagem pode perder as proporções. para isso será utilizado a propriedade 'object-fit: cover' para fazer o ajuste */
+  object-fit: cover;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /* para criar o polígono será utilizada a ferramenta 'clip-path: polygon' e os valores para definir a posição serão obtidas através do site: https://bennettfeely.com/clippy/ */
+}
+  /* '.avatar > img' irá trabalhar nas imagens que estão no primeiro nível. caso não adicione o sinal referencial (>, <), irá modificar todas as imagens dentro de '.avatar' */
+h1 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+a {
+  color: var(--gray);
+  text-decoration: none;
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.25rem;
+  justify-content: center;
+}

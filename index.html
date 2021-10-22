@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <title>Nilton Pegas - DoWhile 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- indica que o style.css do href é um stylesheet | tags que contém apenas propriedades (e não contém atributos) podem ser fechadas nelas mesmas (ex: <link 'propriedade' />)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com"   crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!-- estilos do google obtidos em fonts.google.com: encontra o estilo e copia a tag fornecida por ele-->
+  </head>
+	<body>
+    <main>
+      <div class="avatar">
+        <span>
+          <img src="images/build.svg" alt="Selo Rocketseat">
+        </span>
+        <!-- <span> permite sobreposição de elementos: no CSS serão definidos os parâmetros em '.avatar span {}'-->
+        <img id="userImage" src="images/people.jpg" alt="Foto Pessoal">
+      </div>
+      <div class="container">
+      <!-- div cria uma caixa que contém os elementos-->
+        <h1 id="userName">
+          Nilton Pegas
+        </h1>
+        <!-- tag para deixar texto grande e negritado-->
+        <a id="userGitHubLink" href="https://github.com/nilton_pegas" target="_blank">
+          <img src="images/github.svg" alt="Ícone do Github">
+          <span id="userLogin">nilton_pegas</span>
+        </a>
+        <!-- tag para criar hiperlink-->
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
+      <ul id="socialLinks">
+      <!-- ul cria uma lista não ordenada-->
+        <li class="youtube">
+          <a href="https://youtube.com/nilton_pegas" target="_blank">
+            <img src="images/youtube.svg" alt="Ícone do Youtube">
+          <!-- adicionar  'target="_blank" /' para o link abrir em uma nova página do navegador-->
+          </a>
+        </li>
+        <li class="facebook">
+          <a href="https://facebook.com/nilton_pegas" target="_blank">
+            <img src="images/facebook.svg" alt="Ícone do Facebook">
+          </a>
+        </li>
+        <li class="instagram">
+          <a href="https://instagram.com/nilton_pegas" target="_blank">
+            <img src="images/instagram.svg" alt="Ícone do Instagram">
+          </a>
+        </li>
+        <li class="twitter">
+          <a href="https://twitter.com/nilton_pegas" target="_blank">
+            <img src="images/twitter.svg" alt="Ícone do Twitter">
+          </a>
+        </li>
+      </ul>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
