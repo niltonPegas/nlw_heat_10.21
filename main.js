@@ -3,7 +3,7 @@ const linksSocialMedia = {
   youtube: "sem_usuario",
   facebook: "sem_usuario",
   instagram: "nilton_pegas",
-  twitter: "verificar"
+  twitter: "sem_usuário"
 }
 /* vírgulas para serparar os elementos dentro dos objetos */
 
