@@ -1,13 +1,16 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+/* bloco para iniciar a programação do CSS. limpar as informações já préconfiguradas dos navegadores */
 html,
 body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
   /* declarando uma variável '--black' e '--gray' */
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: sans-serif, 'Roboto';
   -webkit-font-smoothing: antialiased;
 }
   /* font-family: colocando duas propriedades, ele tentará carregar a primeira (Roboto), caso não seja possível, irá preencher com a segunda (sans-serif) */
@@ -15,15 +18,34 @@ body {
 body {
   display: grid;
   place-items: center;
+  display: grid;
+  place-items: center;
+  background-color: #121214;
+  background-image: url(images/desktop/background-desktop.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 main {
   background: url(images/background.png) no-repeat center/cover;
-  /* width: 375px;
-  height: 812px; */
-  width: 100vw;
+  width: 375px;
+  height: 812px;
+  /* width: 100vw;
   min-height: 812px;
-  height: 100vw;
+  height: 100vw; */
+
+  color: var(--grey-white);
+  border-radius: 5px;
+
+  background-color: rgba(126, 126, 126, 0.2);
+  box-shadow: 5px 15px 30px 5px rgba(0, 0, 0, 0.7); 
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+  transform: translateZ(0);
 }
+
 .container {
   max-width: 250px;
   margin-right: auto;
@@ -32,7 +54,7 @@ main {
   color: var(--gray); /* utilizando a variável declarada em <body> */
   }
 .avatar {
-  width: 10rem;
+  /* width: 10rem; */
   margin: 11.5rem auto 0;
   /* cada parâmetro em 'margin' define uma margem de acordo com a quantidade de atribudos (a b, a b c, a b c d) */
   position: relative;
@@ -57,26 +79,125 @@ main {
 h1 {
   font-size: 1.5rem;
   margin-top: 1.5rem;
+  font-weight: 700;
 }
 a {
-  color: var(--gray);
+  color: var(--grey);
   text-decoration: none;
+
   margin-top: 0.25rem;
+  font-weight: 400;
+  font-size: 1rem;
 
   display: flex;
-  gap: 0.75rem;
+  align-items: center;
   justify-content: center;
+  gap: 0.75rem;
 }
 p {
   margin-top: 2rem;
+  font-weight: 400;
+  font-size: 0.875rem;
 }
 
 ul {
-  margin-top: 4rem;
-  list-style: none;
-  padding: 0;
+  margin: 4rem auto 0;
 
   display: flex;
-  gap: 0.25rem;
   justify-content: center;
+  gap: 0.7rem;
+
+  list-style: none;
 }
+
+ul > li > a > img {
+  border-radius: 20%;
+}
+
+.rotate {
+  animation: rotate 40s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#userImage {
+  transition: all ease 1s;
+}
+
+#userImage:hover {
+  width: 11.5rem;
+  height: 13rem;
+}
+
+.social-btn {
+  position: relative;
+  border-radius: 0.25rem;
+  width: 50px;
+  top: 0;
+  transition: all ease 0.4s;
+}
+.social-btn:hover {
+  border-radius: 50%;
+  top: -10px;
+}
+
+.youtube:hover {
+  box-shadow: 0rem 5px 15px rgba(255, 0, 0, 0.5);
+}
+.facebook:hover {
+  box-shadow: 0rem 5px 15px rgba(47, 112, 192, 0.5);
+}
+.instagram:hover {
+  box-shadow: 0rem 5px 15px rgba(221, 101, 41, 0.5);
+}
+.twitter:hover {
+  box-shadow: 0rem 5px 15px rgba(0, 172, 238, 0.5);
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 358px;
+    height: 560px;
+    background: url(images/desktop/background-card-desktop.png);
+    background-size: 358px 560px;
+  }
+
+  .avatar {
+    margin: 4.7rem auto 0;
+  }
+
+  ul {
+    margin: 1.5rem auto 0;
+  }
+  
+  .rope {
+    position: absolute;
+    z-index: 2;
+    width: 80px;
+    height: 750px;
+    background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+    border-radius: 0 0 3px 3px;
+    /* right: vw; */
+    top: 0;
+    margin-top: -45rem;
+    margin-left: 8.9rem;
+    /* margin-left: -40px; */
+  }
+
+  .clasp {
+    position: absolute;
+    background: #121214;
+    z-index: 1;
+    width: 100px;
+    height: 12px;
+    margin-left: 8.3rem;
+    margin-top: 1.5rem;
+    border-radius: 1.5rem;
+  }
