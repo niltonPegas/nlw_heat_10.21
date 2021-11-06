@@ -149,16 +149,16 @@ ul > li > a > img {
 }
 
 .youtube:hover {
-  box-shadow: 0rem 5px 15px rgba(255, 0, 0, 0.5);
+  box-shadow: 0rem 10px 15px rgba(255, 0, 0, 0.5);
 }
 .facebook:hover {
-  box-shadow: 0rem 5px 15px rgba(47, 112, 192, 0.5);
+  box-shadow: 0rem 10px 15px rgba(47, 112, 192, 0.5);
 }
 .instagram:hover {
-  box-shadow: 0rem 5px 15px rgba(221, 101, 41, 0.5);
+  box-shadow: 0rem 10px 15px rgba(221, 101, 41, 0.5);
 }
 .twitter:hover {
-  box-shadow: 0rem 5px 15px rgba(0, 172, 238, 0.5);
+  box-shadow: 0rem 10px 15px rgba(0, 172, 238, 0.5);
 }
 
 @media (min-width: 800px) {
@@ -192,13 +192,13 @@ ul > li > a > img {
   }
 
   .clasp {
-    position: absolute;
-    background: #121214;
-    z-index: 1;
-    width: 100px;
-    height: 12px;
-    margin-left: 8.3rem;
-    margin-top: 1.5rem;
-    border-radius: 1.5rem;
+  position: absolute;
+  background: #121214;
+  z-index: 1;
+  width: 100px;
+  height: 12px;
+  margin-left: 8.3rem;
+  margin-top: 1.5rem;
+  border-radius: 1.5rem;
   }
 }
