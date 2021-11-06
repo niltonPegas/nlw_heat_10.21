@@ -1,8 +1,8 @@
 const linksSocialMedia = {
-  github: "niltonPegas",
+  github: "niltonpegass",
   youtube: "sem_usuario",
   facebook: "sem_usuario",
-  instagram: "nilton_pegas",
+  instagram: "niltonpegass",
   twitter: "sem_usuário"
 }
 /* vírgulas para serparar os elementos dentro dos objetos */
